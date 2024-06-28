@@ -1,0 +1,24 @@
+{
+  "name": "harmoniaphp/framework",
+  "description": "A simple PHP framework",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "HarmoniaPHP",
+      "email": "harmoniaphp@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Harmonia\\Framework\\": "src/"
+    }
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^7.1"
+  },
+  "require": {
+    "symfony/http-foundation": "^7.1",
+    "nikic/fast-route": "^1.3"
+  }
+}
