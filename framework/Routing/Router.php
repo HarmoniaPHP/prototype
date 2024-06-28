@@ -41,10 +41,14 @@ class Router implements RouterInterface
 
         switch ($routeInfo[0]) {
             case Dispatcher::NOT_FOUND:
-                throw new HttpException('Not Found', 404);
+                $exception = new HttpException('Not Found', 404);
+                $exception->setStatusCode(404);
+                throw $exception;
             case Dispatcher::METHOD_NOT_ALLOWED:
                 $allowedMethods = implode(', ', $routeInfo[1]);
-                throw new HttpRequestMethodException("Method Not Allowed. Allowed methods: $allowedMethods");
+                $exception = new HttpRequestMethodException("Method Not Allowed. Allowed methods: $allowedMethods");
+                $exception->setStatusCode(405);
+                throw $exception;
         }
 
         return [$routeInfo[1], $routeInfo[2]];
