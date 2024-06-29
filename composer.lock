@@ -12,12 +12,13 @@
             "dist": {
                 "type": "path",
                 "url": "framework",
-                "reference": "bd13f78dae7ef832f6a37b6bc7aafd77babb2512"
+                "reference": "4724fc78eeca91f021735505617f63093e6a6f0a"
             },
             "require": {
                 "league/container": "^4.2",
                 "nikic/fast-route": "^1.3",
                 "psr/container": "^2.0",
+                "smarty/smarty": "^5.3",
                 "symfony/dotenv": "^7.1",
                 "symfony/http-foundation": "^7.1"
             },
@@ -239,6 +240,76 @@
                 "source": "https://github.com/php-fig/container"
             },
             "time": "2023-09-22T11:11:30+00:00"
+        },
+        {
+            "name": "smarty/smarty",
+            "version": "v5.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/smarty-php/smarty.git",
+                "reference": "3cb35854326a94120cd415b81db28c53d95d0d5d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/smarty-php/smarty/zipball/3cb35854326a94120cd415b81db28c53d95d0d5d",
+                "reference": "3cb35854326a94120cd415b81db28c53d95d0d5d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "symfony/polyfill-mbstring": "^1.27"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5 || ^7.5",
+                "smarty/smarty-lexer": "^4.0.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Smarty\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Monte Ohrt",
+                    "email": "monte@ohrt.com"
+                },
+                {
+                    "name": "Uwe Tews",
+                    "email": "uwe.tews@googlemail.com"
+                },
+                {
+                    "name": "Rodney Rehm",
+                    "email": "rodney.rehm@medialize.de"
+                },
+                {
+                    "name": "Simon Wisselink",
+                    "homepage": "https://www.iwink.nl/"
+                }
+            ],
+            "description": "Smarty - the compiling PHP template engine",
+            "homepage": "https://smarty-php.github.io/smarty/",
+            "keywords": [
+                "templating"
+            ],
+            "support": {
+                "forum": "https://github.com/smarty-php/smarty/discussions",
+                "issues": "https://github.com/smarty-php/smarty/issues",
+                "source": "https://github.com/smarty-php/smarty/tree/v5.3.1"
+            },
+            "time": "2024-06-16T19:51:13+00:00"
         },
         {
             "name": "symfony/dotenv",

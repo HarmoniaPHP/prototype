@@ -6,12 +6,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 return [
     ['GET', '/', [HomeController::class, 'index']],
-    [
-        'GET',
-        '/posts/create',
-        function () {
-            return new Response('Create Post', 200);
-        }
-    ],
+    ['GET', '/posts', [PostController::class, 'index']],
+    ['GET', '/posts/create', [PostController::class, 'create']],
+    ['POST', '/posts', [PostController::class, 'store']],
     ['GET', '/posts/{id}', [PostController::class, 'show']],
 ];

@@ -6,3 +6,11 @@ if (!function_exists('env')) {
         return $_ENV[$key] ?? $default;
     }
 }
+
+
+if (!function_exists('asset')) {
+    function asset($path): string
+    {
+        return '/' . ltrim(str_replace(BASE_PATH, '', $path), '/');
+    }
+}
